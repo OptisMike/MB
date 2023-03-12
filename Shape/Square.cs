@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shape
+namespace Square
 {
-    public class Shape<T>
+    public class Squre<T>
     {
 
     }
