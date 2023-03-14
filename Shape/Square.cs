@@ -50,7 +50,7 @@ namespace Square
                 foreach (var side in sides)
                 {
                     if (side < (sum - side))
-                        throw new Exception("There is no such figure.");
+                        throw new Exception("The shape does not exist.");
                 }
             }
             return true;
