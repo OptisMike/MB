@@ -8,27 +8,27 @@ namespace Square
 {
     static public class Squre
     {
-        static public double Calculate(params double[] side)
+        static public double Shape(params double[] side)
         {
             switch (side.Length) 
             {
                 case 1:
-                    return CircleCalculate(side[0]);
+                    return Circle(side[0]);
                 case 3:
-                    return TriangleCalculate(side[0], side[1], side[2]);
+                    return Triangle(side[0], side[1], side[2]);
                 default:
                     return 0;
             }
         }
 
-        static public double CircleCalculate(double radius)
+        static public double Circle(double radius)
         {
             if (IsShapeSidesExist(radius))
                 return Math.PI * Math.Pow(radius, 2);
             return 0;
         }
 
-        static public double TriangleCalculate(double firstSide, double secondSide, double thirdSide)
+        static public double Triangle(double firstSide, double secondSide, double thirdSide)
         {
             if (IsShapeSidesExist(firstSide, secondSide, thirdSide))
             {
