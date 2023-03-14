@@ -1,4 +1,4 @@
-# [Задания №1 <-КЛИК](https://github.com/OptisMike/MB/blob/master/Shape/Square.cs)
+# [Задания №1(тут)](https://github.com/OptisMike/MB/blob/master/Shape/Square.cs)
 
 # Задание №2:
 
