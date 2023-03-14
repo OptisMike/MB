@@ -23,7 +23,7 @@ namespace Square
 
         static public double CircleCalculate(double radius)
         {
-            if (IsSidesGreaterZero(radius))
+            if (IsShapeSidesExist(radius))
                 return Math.PI * Math.Pow(radius, 2);
             return 0;
         }
@@ -33,18 +33,34 @@ namespace Square
             return 0;
         }
 
-        static private bool IsTriangleExist()
+        static private bool IsShapeSidesExist(params double[] sides)
         {
+            int sideCount = sides.Length;
 
+            if (sideCount == 2)
+                throw new Exception("A figure cannot consist of two sides");
+
+            double sum = sides.Sum();
+
+            if (IsSidesGreaterZero(sides))
+            {
+                if (sideCount == 1)
+                    return true;
+
+                foreach (var side in sides)
+                {
+                    if (side < (sum - side))
+                        throw new Exception("There is no such figure.");
+                }
+            }
+            return true;
         }
 
         static private bool IsSidesGreaterZero(params double[] sides)
         {
             foreach (var side in sides)
-            {
                 if (side <= 0)
-                    return false;
-            }
+                    throw new Exception("Sides must have a value greater than zero");         
             return true;
         }
     }
