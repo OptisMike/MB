@@ -1,3 +1,12 @@
-[задания 1](https://github.com/OptisMike/MB/blob/master/Shape/Square.cs)
+# [Задания №1](https://github.com/OptisMike/MB/blob/master/Shape/Square.cs)
 
-##11
+# Задание №2:
+
+```sql
+SELECT P.Name AS Product, C.Name AS Category
+FROM Products P
+LEFT JOIN ProductСategory PC
+ON P.Id = PC.ProductId
+LEFT JOIN Сategory C
+ON PC.CategoryId = C.Id;
+```
