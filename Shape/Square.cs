@@ -30,6 +30,12 @@ namespace Square
 
         static public double TriangleCalculate(double firstSide, double secondSide, double thirdSide)
         {
+            if (IsShapeSidesExist(firstSide, secondSide, thirdSide))
+            {
+                double p = (firstSide - secondSide - thirdSide) / 2; // половина периметра
+
+                return Math.Sqrt(p * (p - firstSide) * (p - secondSide) * (p - thirdSide)); //Формула Герона
+            }
             return 0;
         }
 
@@ -38,7 +44,7 @@ namespace Square
             int sideCount = sides.Length;
 
             if (sideCount == 2)
-                throw new Exception("A figure cannot consist of two sides");
+                throw new Exception("A shape cannot consist of two sides");
 
             double sum = sides.Sum();
 
